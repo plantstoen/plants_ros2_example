@@ -21,7 +21,11 @@ setup(
     entry_points={
         'console_scripts': [
             'basic_publisher = simple_pubsub_python.basic_publisher:main',
-            'basic_subsriber = simple_pubsub_python.basic_subscriber:main'
+            'basic_subsriber = simple_pubsub_python.basic_subscriber:main',
+            'natural_number_generator = simple_pubsub_python.natural_number_generator:main',
+            'sum_calculator = simple_pubsub_python.sum_calculator:main',
+            'factorial_calculator = simple_pubsub_python.factorial_calculator:main',
+
         ],
     },
 )

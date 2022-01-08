@@ -13,7 +13,7 @@ class BasicSubscriber(Node):
             'basic_pubsub',
             self.listener_callback,
             10)
-        self.subscription  # prevent unused variable warning
+        self.subscription  
 
     def listener_callback(self, msg):
         self.get_logger().info('Received: "%s"' % msg.data)

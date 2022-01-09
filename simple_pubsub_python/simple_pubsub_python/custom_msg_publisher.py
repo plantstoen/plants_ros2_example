@@ -1,12 +1,12 @@
 import rclpy
 from rclpy.node import Node
 
-from basic_interface.msg import MockSensor
+from basic_interface.msg import MockSensor # 직접 만든 msg파일을 import!
 
 class CustomMsgPublisher(Node):
 
     def __init__(self):
-        super().__init__('basic_publisher')
+        super().__init__('custom_msg_publisher')
         self.publisher_ = self.create_publisher(MockSensor, 'mocksensor_topic', 10)
         timer_period = 1
         self.timer = self.create_timer(timer_period, self.timer_callback)

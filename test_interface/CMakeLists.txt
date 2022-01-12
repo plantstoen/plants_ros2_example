@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(basic_interface)
+project(test_interface)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -23,8 +23,6 @@ find_package(ament_cmake REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
-
-  find_package(rosidl_default_generators REQUIRED)
   # the following line skips the linter which checks for copyrights
   # uncomment the line when a copyright and license is not present in all source files
   #set(ament_cmake_copyright_FOUND TRUE)
@@ -33,11 +31,5 @@ if(BUILD_TESTING)
   #set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
-
-
-rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/MockSensor.msg"
-  "srv/MockSensorControl.srv"
-)
 
 ament_package()
